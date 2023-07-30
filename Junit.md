@@ -30,8 +30,9 @@ If you're using __Maven__, you can simply add the following to your `pom.xml`:
 
 ```xml
 <dependency>
-	<groupId></groupId>
-	<
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.0.0-M4</version>
 </dependency>
 ```
 
