@@ -35,6 +35,23 @@ If you're using __Maven__, you can simply add the following to your `pom.xml`:
     <version>5.0.0-M4</version>
 </dependency>
 ```
+As mentioned, a Java 8 baseline for your project is required.</br>
+Currently, only IntelliJ IDEA has JUnit 5 in the IDE, while Eclipse just offers beta support.</br>
+Anoter way to run the tests is by using the Maven Surefire plugin:
+```xml
+<plugin> 
+    <artifactId>maven-surefire-plugin</artifactId> 
+    <version>2.20</version> 
+    <dependencies> 
+        <dependency> 
+            <groupId>org.junit.platform</groupId> 
+            <artifactId>junit-platform-surefire-provider</artifactId> 
+            <version>1.0.0-M4</version> 
+        </dependency>
+    </dependencies>
+</plugin>
+```
+With this plugin set up, tests will run with the standard `mvn clean install` command.
 
 ## Writing Test Script
 Make sure that your local machine runs on JDK8 or newer. Create a new Java file called `SimpleTest.java`
