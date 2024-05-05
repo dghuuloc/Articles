@@ -18,19 +18,16 @@ An ORM (Object-relational mapping) is the programming technique to map __applica
 ORM tools are used for Relational databases like MySql, Oracle database, db2 and etc. For NoSQL databases, we make use of OGM tools which is out of scope for this tutorial.
 
 ## What is Hibernate?
-Hibernate is an ORM tool which is used in your __DAO (data access layer) layer__. It provides a framework to map OOP domain models to relational database tables in the Spring Boot application. As you can see in the diagram, ORM seats between your database and DA Layer.
+Hibernate is a Java based ORM tool which is used in your __DAO (data access layer) layer__. It provides a framework for mapping application domain objects to relational database tables in the Spring Boot application. 
 
-Hibernate inherits the core of JPA : `EntityManagerFactory`, `EntityManager`, `EntityTransaction` and implements them. Hibernate, internally, uses JDBC to interact with relational database after connecting to the database.
+Hibernate provides JPA implementation thats maps your database records to Java objects and generates the required SQL statements to replicate all operations to the database. (Hibernate is an implementation of JPA guidelines.).
 
-The main feature of Hibernate is to map the Java classes to database tables. Following are some key features of Hibernate:
-- Hibernate is an implementation of JPA guidelines.
-- It helps in mapping Java data types to SQL data types.
-- It is the contributor of JPA.
+Hibernate uses JDBC for all database communications. Hibernate uses JDBC to interact with the database. 
 
-Now you must be wondering out why there is need for JPA, right. So as illustrated, JPA is a specification. It gives common functionality and prototype to ORM tools. All ORM tools (such as Hibernate) follow the common standards, by executing the same specification.
+Hibernate acts as an additionall layer on top of JDBC and enables you to implement a database-independent persistence layer.
 
-> [!NOTE]
-> Remember, Hibernate is a JPA compliant ORM tool.
+### How Hibernate works behind the scenes?
+Whenever we persist or store an object using Hibernate, then Hibernate will generate SQL queries and execute those SQL queries with respect to the database  using JDBC, we just have to play with the objects.
 
 ### Hibernate Architecture
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/hibernate-architecture.png"/></p>
@@ -72,11 +69,9 @@ Let us do discuss some key features of JPA which are as follows:
 ### JPA Repository Pattern
 The JPA repository pattern contains database operations that make it easier for us. At the same time, the JPA repository can work with Hibernate, Eclipse Link, etc. It is just an abstraction.
 
-JPA uses a similar repository pattern under the hood.
-
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/jpa-repository-pattern.png"/></p>
 
-As you can see, we have entities, and each entity has its own repositories that have been extended from the JpaRepository interface in the background. The JPA repository works with EntityManager, and It works with Hibernate, which works with JDBC.
+Now you must be wondering out why there is need for JPA, right. So as illustrated, JPA is a specification. It gives common functionality and prototype to ORM tools. All ORM tools (such as Hibernate) follow the common standards, by executing the same specification.
 
 ## What Is Spring Data JPA?
 Spring Data is a part of the __Spring Framework__. Spring Data JPA provides Repository Interface that wraps JPA into another abstraction. This Spring Data JPA uses JPA implementations such as Hibernate to utilize JPA. It is very useful to store and retrieve data from the database through Java code without the need to write the query.
