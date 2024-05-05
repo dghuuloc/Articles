@@ -1,6 +1,9 @@
 ## <p align="center">Introduction to JPA and Hibernate</p>
 ---
 
+## What is JDBC (Java Database Connectivity)?
+JDBC is the standard Java API for connecting to relational databases. Unlike JPA and Hibernate, JDBC is lower level and requires developers to write SQL queries and handle result sets manually. While it offers more control, it also demands more code. JDBC is often used when fine-grained control over database interactions is required, or when working with databases not covered by higher-level frameworks.
+
 ## What is Persistence?
 Today’s application requires persistent data, meaning the data needs to be reliably stored in a database. Then the application should be able to retrieve the data from the database and convert it into java objects whenever needed. As you know, there are several databases today like SQL databases, NoSQL databases, time-series databases and so on. This tutorial will only be talking about the SQL databases (relational database) like `MySQL`, `Oracle Database`, `MS-SQL`, `H2`, etc.
 
