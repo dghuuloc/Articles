@@ -11,7 +11,7 @@ Today’s application requires persistent data, meaning the data needs to be rel
 > Object persistence means, individual objects living in the application memory (RAM), can be saved in a data store and be recreated later as and when needed.
 
 ## What is ORM?
-An ORM (Object-relational mapping) is the programming technique to map __application domain model objects__ to __the relational database tables__. Technically, ORM is a wrapper on top of the JDBC layer that automates a lot of boilerplate code. There are several ORM tools available in Java such as `Jboss Hibernate`, `Oracle TopLink`, `EclipseLink`, `OpenJPA`, etc.
+An ORM (Object-relational mapping) is the programming technique to map __application domain model objects to the relational database tables__. Technically, ORM is a wrapper on top of the JDBC layer that automates a lot of boilerplate code. There are several ORM tools available in Java such as `Jboss Hibernate`, `Oracle TopLink`, `EclipseLink`, `OpenJPA`, etc.
 
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/orm.png"/></p>
 
