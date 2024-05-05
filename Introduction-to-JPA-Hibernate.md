@@ -117,3 +117,5 @@ Spring Data JPA provides a solation to reduce a lot of boilerplate code. We can 
 
 ## References
 - [How to Use Jpa Repository in Spring Boot](https://springjava.com/spring-data-jpa/how-to-use-jpa-repository-in-spring-boot/)
+- [What is Hibernate And JPA?](https://medium.com/@dafikabukcu/what-is-hibernate-and-jpa-ef77ba1dac15)
+- [Difference Between Hibernate and Spring Data JPA](https://www.youtube.com/watch?app=desktop&v=4Py9RTVWyvE)
