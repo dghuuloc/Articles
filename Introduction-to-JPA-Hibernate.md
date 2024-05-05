@@ -90,15 +90,16 @@ Spring Data JPA is not a JPA provider. It is a library/framework that adds an ex
 ## What Is the Difference Between Hibernate and Spring Data JPA?
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/hibernate-vs-spring-data-jpa.png"/></p>
 
-- Hibernate is a __JPA implementation__, while Spring Data JPA is a __JPA Data Access Abstraction__.
-- Spring Data offers a solution to `GenericDao` custom implementations. It can also generate JPA queries on your behalf through method name conventions. With Spring Data, you may use Hibernate, Eclipse Link, or any other JPA provider.
-- Spring Data JPA is not an implementation or JPA provider, it's just an abstraction used to significantly reduce the amount of boilerplate code required to implement data access layers for various persistence stores.
-- Hibernate provides a reference implementation of the Java Persistence API that makes it a great choice as an ORM tool with the benefits of loose coupling.
+- Hibernate is a Java based ORM tool that provides a framework for mapping application domain objects to the relational database tables and vice versa.
+- Spring Data JPA is an abstraction layer on top of JPA to Reduce the amount of boilerplate code required to implement data access object (DAO) layer.
+- Hibernate is a JPA provider (JPA specification implementation). Spring Data JPA is not a JPA provider. It simply __hides__ the Java Persistence API (and the JPA provider) behind its repository abstraction.
 
 > [!NOTE]
-> Remember, Spring Data JPA always requires the JPA provider such as Hibernate or Eclipse Link.
+> Spring Data JPA always requires the JPA provider such as Hibernate or Eclipse Link.
+> Spring Data JPA uses Hibernate as a default JPA provider.
+> Spring Data JPA cannot work without a JPA provider.
 
-## What is the Difference Between JPa and Hibernate?
+## What is the Difference Between JPA and Hibernate?
 As we know that JPA is just a specification, meaning there is no implementation. You can annotate your classes as much as you would like with JPA annotations, however, without an implementation, nothing will happen. Think of JPA as the guidelines that must be followed or an interface, while Hibernate's JPA implementation is code that meets the API as defined by the JPA specification and provides the under the hood functionality. 
 
 ## Why do use Spring Data JPA?
