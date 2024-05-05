@@ -53,15 +53,7 @@ __Criteria Object__:
 It usually uses dynamic queries that are obtained from Session objects.
 
 ## What is JPA?
-JPA stands for __Java Persistent API_, JPA facilitates object-relational mapping to manage relational data in Java applications. It provides a platform to work directly with objects instead of using SQL statements. In easy terms, JPA is a specification and it's implemented by Hibernate or other ORM tools.
-
-Let us do discuss some key features of JPA which are as follows:
-- JPA is only a specification, it is not an implementation.
-- JPA is a set of rules and guidelines to set interfaces for implementing object-relational mapping.
-- JPA needs a few classes and interfaces.
-- JPA supports simple, cleaner, and assimilated object-relational mapping.
-- JPA supports polymorphism and inheritance.
-- JPA provides a query language that can retrieve objects without writing massive SQL queries
+JPA stands for __Java Persistent API__, JPA facilitates object-relational mapping to manage relational data in Java applications. It provides a platform to work directly with objects instead of using SQL statements. In easy terms, JPA is a specification and it's implemented by Hibernate or other ORM tools.
 
 > [!NOTE]
 > JPA/ORM tools are only for RDBMS, not for schemaless databases.
