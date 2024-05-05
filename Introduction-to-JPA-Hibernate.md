@@ -74,11 +74,11 @@ The JPA repository pattern contains database operations that make it easier for 
 Now you must be wondering out why there is need for JPA, right. So as illustrated, JPA is a specification. It gives common functionality and prototype to ORM tools. All ORM tools (such as Hibernate) follow the common standards, by executing the same specification.
 
 ## What Is Spring Data JPA?
-Spring Data is a part of the __Spring Framework__. Spring Data JPA provides Repository Interface that wraps JPA into another abstraction. This Spring Data JPA uses JPA implementations such as Hibernate to utilize JPA. It is very useful to store and retrieve data from the database through Java code without the need to write the query.
+Spring Data is a part of the __Spring Framework__. Spring Data JPA provides Repository Interface that wraps JPA into another abstraction. This Spring Data JPA uses JPA implementations such as Hibernate to utilize JPA.
 
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/spring-data-jpa.png"/></p>
 
-The goal of Spring Data JPA repository module is to significantly reduce the amount of boilerplate code required to implement data access layers for various persistence stores.
+The goal of Spring Data JPA repository is to significantly reduce the amount of boilerplate code required to implement data access (DAO) layers for various persistence stores.
 
 Spring Data JPA is not a JPA provider. It is a library/framework that adds an extra layer of abstraction on the top of our JPA provider (like Hibernate).
 
@@ -108,7 +108,9 @@ If we use JPA/Hiberante then write a lot of coding while implementing DAO/Reposi
 
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/application-architecture.png"/></p>
 
-Spring Data JPA provides a solation to reduce a lot of boilerplate code. We can use Spring Data JPA to reduce the amount of boilerplate code required to implement the data access object (DAO) layer.
+Spring Data JPA provides a solution to reduce a lot of boilerplate code. We can use Spring Data JPA to reduce the amount of boilerplate code required to implement the data access object (DAO) layer.
+
+<p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/application-using-spring-data-jpa.png"/></p>
 
 ## Conclusion
 - __JPA__ is API interface for ORM technology in Java Applications.
