@@ -94,9 +94,9 @@ Hibernate is a Java based ORM tool that provides a framework for mapping applica
 In short, JPA provides standard specification (interface). Hibernate provides a implementation for JPA specification.
 
 ## Why do use Spring Data JPA?
-In typical three-layer Spring application architecture, we create three layers (__Controller__, __Service__, and __DAO/REpository layer__).
+In typical three-layer Spring application architecture, we create three layers (__Controller__, __Service__, and __DAO/Repository layer__).
 
-If we use JPA/Hiberante then write a lot of coding while implementing DAO/Repository layer.
+If we use JPA/Hibernate then write a lot of coding while implementing DAO/Repository layer.
 
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/application-architecture.png"/></p>
 
