@@ -8,7 +8,7 @@ Today’s application requires persistent data, meaning the data needs to be rel
 > Object persistence means, individual objects living in the application memory (RAM), can be saved in a data store and be recreated later as and when needed.
 
 ## What is ORM?
-An ORM (Object-relational mapping) is the programming technique to map application domain model objects to the relational database tables. Technically, ORM is a wrapper on top of the JDBC layer that automates a lot of boilerplate code. There are several ORM tools available in Java such as `Jboss Hibernate`, `Oracle TopLink`, `EclipseLink`, `OpenJPA`, etc.
+An ORM (Object-relational mapping) is the programming technique to map __application domain model objects__ to __the relational database tables__. Technically, ORM is a wrapper on top of the JDBC layer that automates a lot of boilerplate code. There are several ORM tools available in Java such as `Jboss Hibernate`, `Oracle TopLink`, `EclipseLink`, `OpenJPA`, etc.
 
 <p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/orm.png"/></p>
 
@@ -16,6 +16,8 @@ ORM tools are used for Relational databases like MySql, Oracle database, db2 and
 
 ## What is Hibernate?
 Hibernate is an ORM tool which is used in your __DAO (data access layer) layer__. It makes use of Hibernate API to effectively `load`, `store`, `update`, `delete` and `query`, etc its domain objects. As you can see in the diagram, ORM seats between your database and DA Layer.
+
+Hibernate inherits the core of JPA : `EntityManagerFactory`, `EntityManager`, `EntityTransaction` and implements them. Hibernate, internally, uses JDBC to interact with relational database after connecting to the database.
 
 > [!NOTE]
 > Remember, Hibernate is a JPA compliant ORM tool.
@@ -28,7 +30,7 @@ The main feature of Hibernate is to map the Java classes to database tables. Fol
 Now you must be wondering out why there is need for JPA, right. So as illustrated, JPA is a specification. It gives common functionality and prototype to ORM tools. All ORM tools (such as Hibernate) follow the common standards, by executing the same specification.
 
 ## What is JPA?
-JPA stands for Java Persistent API. It is an official specification from Java that dictates the APIs to be used to persist Entities (Java Objects) in the database. This specification is implemented by Hibernate or other ORM tools.
+JPA stands for __Java Persistent API_, JPA provides mechanism for Java ORM(Object-RelationalMapping) technology. In easy terms,it is a specification from Java that dictates the APIs to be used to persist Entities (Java Objects) in the database. This specification is implemented by Hibernate or other ORM tools.
 
 Let us do discuss some key features of JPA which are as follows:
 - JPA is only a specification, it is not an implementation.
@@ -42,7 +44,11 @@ Let us do discuss some key features of JPA which are as follows:
 > JPA/ORM tools are only for RDBMS, not for schemaless databases.
 
 ## What Is Spring Data JPA?
-Spring Data is a part of the __Spring Framework__. The goal of Spring Data JPA  repository module is to significantly reduce the amount of boilerplate code required to implement data access layers for various persistence stores.
+Spring Data is a part of the __Spring Framework__. Spring Data JPA provides Repository Interface that wraps JPA into another abstraction. This Spring Data JPA uses JPA implementations such as Hibernate to utilize JPA. With this, developers can easily access data.
+
+<p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/spring-data-jpa.png"/></p>
+
+The goal of Spring Data JPA repository module is to significantly reduce the amount of boilerplate code required to implement data access layers for various persistence stores.
 
 Spring Data JPA is not a JPA provider. It is a library/framework that adds an extra layer of abstraction on the top of our JPA provider (like Hibernate).
 
@@ -67,7 +73,8 @@ If we use JPA/Hiberante then write a lot of coding while implementing DAO/Reposi
 
 Spring Data JPA provides a solation to reduce a lot of boilerplate code. We can use Spring Data JPA to reduce the amount of boilerplate code required to implement the data access object (DAO) layer.
 
-
-  
-
+## Conclusion
+- __JPA__ is API interface for ORM technology in Java Applications.
+- __Hibernate__ is the implementations of JPA and uses JDBC internally to connect with database.
+- __Spring Data JPA__ is a composite of modules provided by Spring that uses JPA internally.
 
