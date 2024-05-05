@@ -37,22 +37,22 @@ Now you must be wondering out why there is need for JPA, right. So as illustrate
 
 Hibernate has a layered architecture which helps the user perform operations without touching anything under the hood. Hibernate provides ORM for persistence service.
 
-__Configuration Object__
+__Configuration Object__:
 Usually, the Configuration Object is created once during the application lifecycle; additionally, it is the first hibernate object that is created. It represents the database and other configurations.
 
-__SessionFactory Object__
+__SessionFactory Object__:
 SessionFactory object is created using Configuration Object. The SessionFactory object is a heavyweight object. It is usually created when the application is initialized. Additionally, The SessionFactory is a thread-safe object and is used by other threads.
 
-__Session Object__
+__Session Object__:
 The session object is used to provide the database connection. It was designed as a lightweight object that is to be created each time when database interaction is required. In addition, SessionObject is not recommended to be retained for later use because it is not thread-safe.
 
-__Transaction Object__
+__Transaction Object__:
 The Transaction object is used whenever we want to perform operations on an entity, committing or rolling back changes according to the result.
 
-__Query Object__
+__Query Object__:
 The query object uses SQL or HQL (Hibernate Query Language) to retrieve data from the database. The query instance is obtained by calling the createQuery method that belongs to the Session object.
 
-__Criteria Object__
+__Criteria Object__:
 It usually uses dynamic queries that are obtained from Session objects.
 
 ## What is JPA?
