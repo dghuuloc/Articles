@@ -1,4 +1,4 @@
-## <p align="center">Introduction to JPA and Hibernate</p>
+# <p align="center">Introduction to JPA and Hibernate</p>
 ---
 
 ## What is JDBC (Java Database Connectivity)?
