@@ -10,20 +10,33 @@ Today’s application requires persistent data, meaning the data needs to be rel
 ## What is ORM?
 An ORM (Object-relational mapping) is the programming technique to map application domain model objects to the relational database tables. Technically, ORM is a wrapper on top of the JDBC layer that automates a lot of boilerplate code. There are several ORM tools available in Java such as `Jboss Hibernate`, `Oracle TopLink`, `EclipseLink`, `OpenJPA`, etc.
 
+<p align="center"><img src="https://github.com/dghuuloc/Articles/blob/main/images/orm.png"/></p>
+
 ORM tools are used for Relational databases like MySql, Oracle database, db2 and etc. For NoSQL databases, we make use of OGM tools which is out of scope for this tutorial.
 
 ## What is Hibernate?
-Hibernate is an ORM tool which is used in your __DAO (data access layer) layer__. It makes use of Hibernate API to effectively `load`, `store`, `update`, `delete` and `query`, etc its domain objects.
-
-As you can see in the diagram, ORM seats between your database and DA Layer.
+Hibernate is an ORM tool which is used in your __DAO (data access layer) layer__. It makes use of Hibernate API to effectively `load`, `store`, `update`, `delete` and `query`, etc its domain objects. As you can see in the diagram, ORM seats between your database and DA Layer.
 
 > [!NOTE]
 > Remember, Hibernate is a JPA compliant ORM tool.
 
-## What is JPA?
-JPA stands for Java Persistent API. It is an official specification from Java that dictates the APIs to be used to persist Entities (Java Objects) in the database. This specification is implemented by Hibernate and other ORM tools.
+The main feature of Hibernate is to map the Java classes to database tables. Following are some key features of Hibernate:
+- Hibernate is an implementation of JPA guidelines.
+- It helps in mapping Java data types to SQL data types.
+- It is the contributor of JPA.
 
-As mentioned earlier, there are several ORM tools that implement their own API. This becomes a portability problem if you want to switch between them for any reason. This is where JPA helps you by providing an API layer on top of ORM tools. Just like JDBC API vs various database core drivers.
+Now you must be wondering out why there is need for JPA, right. So as illustrated, JPA is a specification. It gives common functionality and prototype to ORM tools. All ORM tools (such as Hibernate) follow the common standards, by executing the same specification.
+
+## What is JPA?
+JPA stands for Java Persistent API. It is an official specification from Java that dictates the APIs to be used to persist Entities (Java Objects) in the database. This specification is implemented by Hibernate or other ORM tools.
+
+Let us do discuss some key features of JPA which are as follows:
+- JPA is only a specification, it is not an implementation.
+- It is a set of rules and guidelines to set interfaces for implementing object-relational mapping.
+- It needs a few classes and interfaces.
+- It supports simple, cleaner, and assimilated object-relational mapping.
+- It supports polymorphism and inheritance.
+- Dynamic and named queries can be included in JPA.
 
 > [!NOTE]
 > JPA/ORM tools are only for RDBMS, not for schemaless databases.
