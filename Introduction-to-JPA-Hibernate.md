@@ -95,7 +95,11 @@ Spring Data JPA is not a JPA provider. It is a library/framework that adds an ex
 > Spring Data JPA cannot work without a JPA provider.
 
 ## What is the Difference Between JPA and Hibernate?
-As we know that JPA is just a specification, meaning there is no implementation. You can annotate your classes as much as you would like with JPA annotations, however, without an implementation, nothing will happen. Think of JPA as the guidelines that must be followed or an interface, while Hibernate's JPA implementation is code that meets the API as defined by the JPA specification and provides the under the hood functionality. 
+JPA is just a specification (no implementation) that facilitates object-relational mapping to manage ralational data in Java applications. It provides a platform to work directly with objects instead of using SQL statements.
+
+Hibernate is a Java based ORM tool that provides a framework for mapping application domain objects to the relational database tables and vice versa.
+
+In short, JPA provides standard specification (interface). Hibernate provides a implementation for JPA specification.
 
 ## Why do use Spring Data JPA?
 In typical three-layer Spring application architecture, we create three layers (__Controller__, __Service__, and __DAO/REpository layer__).
